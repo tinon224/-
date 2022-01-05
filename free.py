@@ -47,7 +47,7 @@ class judicial():
 		datas = self.requests()
 		df = pd.DataFrame(datas)
 		df.columns=['法院名稱', '案號股別','拍賣日期拍賣次數','縣市','房屋地址樓層面積','總拍賣底價(元)','點交','空屋','標別','備註','採通訊投標']
-		df.to_xlsx(save_path+str(time.strftime("%Y-%m-%d_%H.%M.%S", time.localtime()))+'.xlsx')
+		df.to_xlsx(save_path+str(time.strftime("%Y-%m-%d_%H.%M.%S", time.localtime()))+'.xlsx') #<<<檔案名稱預設為執行日期，需要可以自行修改。
 
 if __name__ == '__main__':
 	judicial = judicial()
